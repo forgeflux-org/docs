@@ -22,7 +22,7 @@ jobs:
     if: github.ref == 'refs/heads/main'
     steps:
       - name: Display the path
-        run: echo $PATH
+        run: pwd
         shell: bash
       - name: 'checkout'
         uses: actions/checkout@v2
