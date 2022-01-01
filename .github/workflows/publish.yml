@@ -15,7 +15,7 @@ jobs:
         uses: shalzz/zola-deploy-action@v0.13.0
         env:
           PAGES_BRANCH: gh-pages
-          BUILD_DIR: /home/runner/work/ff-zola/ff-zola/docs/
+          BUILD_DIR: ./docs/zola
           TOKEN: ${{ secrets.TOKEN }}
   build_and_deploy:
     runs-on: ubuntu-latest
@@ -29,7 +29,7 @@ jobs:
       - name: 'build and deploy'
         uses: shalzz/zola-deploy-action@v0.13.0
         env:
-          PAGES_BRANCH: main
-          BUILD_DIR: ./docs
+          PAGES_BRANCH: docs
+          BUILD_DIR: ./docs/zola
           TOKEN: ${{ secrets.PUBLIC_TOKEN }}
           REPOSITORY: dat-adi/ff-zola
