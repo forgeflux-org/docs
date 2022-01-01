@@ -29,7 +29,7 @@ jobs:
       - name: 'build and deploy'
         uses: shalzz/zola-deploy-action@v0.13.0
         env:
-          PAGES_BRANCH: docs
-          BUILD_DIR: ~/docs
+          PAGES_BRANCH: main
+          BUILD_DIR: ./docs
           TOKEN: ${{ secrets.PUBLIC_TOKEN }}
           REPOSITORY: dat-adi/ff-zola
