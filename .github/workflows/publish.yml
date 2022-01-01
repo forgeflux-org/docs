@@ -30,6 +30,6 @@ jobs:
         uses: shalzz/zola-deploy-action@v0.13.0
         env:
           PAGES_BRANCH: docs
-          BUILD_DIR: /home/runner/work/ff-zola/ff-zola/docs/
+          BUILD_DIR: ~/docs
           TOKEN: ${{ secrets.PUBLIC_TOKEN }}
           REPOSITORY: dat-adi/ff-zola
