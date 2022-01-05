@@ -3,20 +3,43 @@ title = "Magic Bridges"
 insert_anchor_links = "right"
 +++
 
-## Forge Federation
+# ForgeFlux
 
-This theme for [Zola](https://getzola.org) (static site engine) helps you build and publish your project docs easily and fast. Zola is just one binary that outputs html-pages and additional static assets after building your docs written in Markdown. Thus, you can take the theme, your md-files, Zola and gain flexible and simple website for documentation. 
+[ForgeFlux](https://forgeflux.org/) aims to implement federation in [software forges](https://en.wikipedia.org/wiki/Forge_(software)) , enabling
+a decentralized development environment.
 
-### Step-by-step
+## Why is this significant?
+There have been numerous forges that have popped 
+up over the course of time.
+Each of these forges have their own community base,
+and projects that are associated to the forge itself.
 
-As you may have heard Zola is quite flexible :) So, the scenario below is one of hundreds possible ways to make things done, feel free to find your best. Also, Zola provides their own mechanism to install and use themes, see [the docs](https://www.getzola.org/documentation/themes/installing-and-using-themes/). 
+However, issues arise when a user wishes to contribute towards
+a project that exists in another forge.
+This would require them to charter into unknown forge territory,
+to have to relearn the functionality that they're already at home with.
 
-1. Fork the repo and replace demo-content inside content folder with yours. But take a look to _index.md files. It contains `title` and when you want to have anchor right of your headers add `insert_anchor_links = "right"` to each index. `theme.toml`, screenshot and readme may be deleted too. 
-2. Inside `config.toml` change URL and title on your own. In extra section you can specify path to your GitHub API for version below the logo on nav, favicon and logo itself. Or just remove the lines if you don't need it. Also, you can configure or turn on some additional settings related to Zola. [Specification is here](https://www.getzola.org/documentation/getting-started/configuration/).
-3. In sass/_variables.scss you may change font, color or backgound if you want. 
-4. Almost done. Now, you should decide how you want to build and where will be hosted your website. You can build it locally and upload to somewhere. Or build in GitHub Actions and host on GitHub Pages / Netlify / CloudFlare Pages / AnyS3CloudStorage. [Howto for GitHub Pages](https://www.getzola.org/documentation/deployment/github-pages/). [My example](https://github.com/o365hq/o365hq.com/blob/main/.github/workflows/main.yml) of GitHub workflow with 2-steps build (the first checks for links and spelling errors, the second uploads to Azure). [Dockerfile](https://github.com/codeandmedia/zola_docsascode_theme/blob/master/Dockerfile) to make Docker image.
+ForgeFlux, is an idea, that intends to get rid this problem.
+Work on your own forge, but **bridge** the project.
 
-Enjoy your docs!
+Bridging a project would allow for a user to contribute towards projects that 
+exist in foreign forges, through the comfort of their own forge.
 
-* _Icons: [Office UI Fabric Icons](https://uifabricicons.azurewebsites.net/)_
-* _Copy-code-button: [Aaron Luna](https://aaronluna.dev/blog/add-copy-button-to-code-blocks-hugo-chroma/)_
+## Has this been done before?
+
+The initial [forgefed](https://forgefed.peers.community/) was 
+an attempt to bridge this gap, by introducing the concept 
+of bridging the gap between forges.
+This approach required for the forge developers to actively 
+participate in the development of the software.
+
+The present ForgeFlux, focuses on the implementation being present 
+in the API space instead.
+This reduces the interference required on the side of the forges themselves,
+and seeks to develop on existing utility and APIs provided.
+
+ForgeFlux, consists of a terminology for the development and 
+utilization of it's software, which result in terms such as `forges`,
+and `interfaces` being tossed around.
+It is recommended for a reader to go through the [ecosystem-architecture](https://github.com/forgeflux-org/spec/blob/master/rfc/1-ecosystem-architecture/1-ecosystem-architecture.md), if there is any confusion regarding the usage of particular words in this documentation.
+
