@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dat-adi.github.io/ff-zola/sitemap.xml

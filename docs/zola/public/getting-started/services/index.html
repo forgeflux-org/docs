@@ -1,0 +1,220 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+      <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://dat-adi.github.io/ff-zola/main.css">
+      
+        <link rel="icon" href="https://www.getzola.org/favicon.ico">
+      
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+        <title> Docs | Services </title> 
+    </head>
+    <body>
+
+      
+    <script>
+         fetch('https://api.github.com/repos/getzola/zola/releases/latest')
+          .then((response) => {
+            return response.json();
+          })
+          .then((data) => {
+            let release_name = data.name;
+            let html_url = data.html_url;
+            release.innerHTML = `<a href='${html_url}'>${release_name}</a>`;
+          });
+    </script>
+      
+    <main>
+
+      
+
+        <nav>
+          
+            <a href="https:&#x2F;&#x2F;dat-adi.github.io&#x2F;ff-zola&#x2F;">
+            <img src="https://easydocs.codeandmedia.com/logo.svg" alt="" />
+                </a>
+            
+            
+          
+
+          
+            <div id="release"></div>
+          
+  
+  <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+    <div id="trees">
+               
+            
+                 
+            
+ 
+        <input class="tree-toggle" type="checkbox" id="services" 
+         />
+        <label class="tree-toggle-label" for="services">Services</label>
+                        
+        <ul class="subtree">
+                
+                                <li >
+                                    <a href="https://dat-adi.github.io/ff-zola/services/interface/">Interface</a>
+                                </li>
+
+
+
+                   
+    
+    
+                                <li >
+                                    <a href="https://dat-adi.github.io/ff-zola/services/northstar/">Northstar</a>
+                                </li>
+
+
+
+                   
+    
+    
+    </ul>         
+    
+                 
+            
+ 
+        <input class="tree-toggle" type="checkbox" id="getting-started" 
+        checked />
+        <label class="tree-toggle-label" for="getting-started">Getting Started</label>
+                        
+        <ul class="subtree">
+                
+                                <li class="active">
+                                    <a href="https://dat-adi.github.io/ff-zola/getting-started/services/">Services</a>
+                                </li>
+
+
+
+ 
+
+  
+  
+    
+    
+      
+      
+    
+      
+      
+    
+  
+
+  
+
+                       
+    
+    
+                                <li >
+                                    <a href="https://dat-adi.github.io/ff-zola/getting-started/intro/">How does it work?</a>
+                                </li>
+
+
+
+                   
+    
+    
+    </ul>         
+    
+                 
+            
+ 
+        <input class="tree-toggle" type="checkbox" id="solder" 
+         />
+        <label class="tree-toggle-label" for="solder">Solder</label>
+                        
+        <ul class="subtree">
+                
+                                <li >
+                                    <a href="https://dat-adi.github.io/ff-zola/solder/november2020/">November 2020</a>
+                                </li>
+
+
+
+                   
+    
+    
+                                <li >
+                                    <a href="https://dat-adi.github.io/ff-zola/solder/october2020/">October 2020</a>
+                                </li>
+
+
+
+                   
+    
+    
+                                <li >
+                                    <a href="https://dat-adi.github.io/ff-zola/solder/september2020/">September 2020</a>
+                                </li>
+
+
+
+                   
+    
+    
+    </ul>         
+    
+    </div>    
+  </nav>
+    
+
+<article>
+ 
+  
+  <div id="on_right">
+    <span id="search-ico" class="ms-Icon--Search"></span>
+  </div>
+    <div class="search-container">
+          <input id="search" type="search" placeholder="Search as you type...">
+            <div class="search-results">
+              <div class="search-results__header"></div>
+                <ul class="search-results__items"></ul>
+              </div>
+    </div>
+         
+
+  <div id="wrap">
+    
+        <h1 id="services">Services</h1>
+<p>The services that are currently in active development are Northstar, and Interface.
+However, here's a few more details about them.</p>
+<h2 id="northstar">Northstar</h2>
+<ul>
+<li>Repository :: <a href="https://github.com/forgeflux-org/northstar">Source Code</a></li>
+<li>OpenAPI :: <a href="https://northstar.forgeflux.org/docs/openapi/">OpenAPI Specification</a></li>
+</ul>
+<p>ForgeFlux allows for multiple interfaces to be run against a single software forge.
+Also, the protocol is flexible enough to support multiple types of software forges(GitLab, GitHub, etc).
+The protocol's decentralised nature makes it impossible to create a constant record of which interfaces service forges.</p>
+<p>So we created a discovery service which stores records of interfaces and the forges they service.
+This is very similar to the way DNS works.
+In DNS, hostname is resolved to IP address.</p>
+<p>Here, software forge URL is resolved to URLs of <a href="https://github.com/forgeflux-org/interface">interfaces</a> that service the queried forge.</p>
+<p>For an extensive view on Northstar, please check <a href="https://dat-adi.github.io/ff-zola/services/northstar/">Northstar::Detailed</a></p>
+<h2 id="interface">Interface</h2>
+<ul>
+<li>Repository :: <a href="https://github.com/forgeflux-org/interface">Source Code</a></li>
+<li>OpenAPI :: <a href="https://github.com/forgeflux-org/interface/tree/master/docs/openapi">OpenAPI Specification</a></li>
+</ul>
+<p>Developing Free Software is about liberating users and giving them total control over how the programs they run should work.
+It's only fair that developers of such software enjoy the same levels of liberty.</p>
+<p>ForgeFlux is an attempt to enable federation for major software forges (GitLab, GitHub, Gitea, Source Hut, etc) entirely in API-space.
+We believe our API-space implementation will allow for more organic growth as it will not require any involvement from the forge developers.</p>
+
+    
+  </div>
+
+</article>
+</main>
+
+  
+  <script type="text/javascript" src="https://dat-adi.github.io/ff-zola/elasticlunr.min.js" defer></script>
+  <script type="text/javascript" src="https://dat-adi.github.io/ff-zola/search_index.en.js" defer></script>
+  <script type="text/javascript" src="https://dat-adi.github.io/ff-zola/js.js" defer></script>
+  
+
+</body>
+</html>

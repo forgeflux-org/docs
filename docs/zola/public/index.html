@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+      <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://dat-adi.github.io/ff-zola/main.css">
+      
+        <link rel="icon" href="https://www.getzola.org/favicon.ico">
+      
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+        <title>Docs</title> 
+    </head>
+    <body>
+
+      
+    <script>
+         fetch('https://api.github.com/repos/getzola/zola/releases/latest')
+          .then((response) => {
+            return response.json();
+          })
+          .then((data) => {
+            let release_name = data.name;
+            let html_url = data.html_url;
+            release.innerHTML = `<a href='${html_url}'>${release_name}</a>`;
+          });
+    </script>
+      
+    <main>
+
+      
+
+        <nav>
+          
+            
+            <img src="https://easydocs.codeandmedia.com/logo.svg" alt="" />
+
+            
+            
+          
+
+          
+            <div id="release"></div>
+          
+  
+  <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+    <div id="trees">
+               
+            
+                 
+            
+ 
+        <input class="tree-toggle" type="checkbox" id="services" 
+         />
+        <label class="tree-toggle-label" for="services">Services</label>
+                        
+        <ul class="subtree">
+                
+                                <li >
+                                    <a href="https://dat-adi.github.io/ff-zola/services/interface/">Interface</a>
+                                </li>
+
+
+
+                   
+    
+    
+                                <li >
+                                    <a href="https://dat-adi.github.io/ff-zola/services/northstar/">Northstar</a>
+                                </li>
+
+
+
+                   
+    
+    
+    </ul>         
+    
+                 
+            
+ 
+        <input class="tree-toggle" type="checkbox" id="getting-started" 
+         />
+        <label class="tree-toggle-label" for="getting-started">Getting Started</label>
+                        
+        <ul class="subtree">
+                
+                                <li >
+                                    <a href="https://dat-adi.github.io/ff-zola/getting-started/services/">Services</a>
+                                </li>
+
+
+
+                   
+    
+    
+                                <li >
+                                    <a href="https://dat-adi.github.io/ff-zola/getting-started/intro/">How does it work?</a>
+                                </li>
+
+
+
+                   
+    
+    
+    </ul>         
+    
+                 
+            
+ 
+        <input class="tree-toggle" type="checkbox" id="solder" 
+         />
+        <label class="tree-toggle-label" for="solder">Solder</label>
+                        
+        <ul class="subtree">
+                
+                                <li >
+                                    <a href="https://dat-adi.github.io/ff-zola/solder/november2020/">November 2020</a>
+                                </li>
+
+
+
+                   
+    
+    
+                                <li >
+                                    <a href="https://dat-adi.github.io/ff-zola/solder/october2020/">October 2020</a>
+                                </li>
+
+
+
+                   
+    
+    
+                                <li >
+                                    <a href="https://dat-adi.github.io/ff-zola/solder/september2020/">September 2020</a>
+                                </li>
+
+
+
+                   
+    
+    
+    </ul>         
+    
+    </div>    
+  </nav>
+    
+
+<article>
+ 
+  
+  <div id="on_right">
+    <span id="search-ico" class="ms-Icon--Search"></span>
+  </div>
+    <div class="search-container">
+          <input id="search" type="search" placeholder="Search as you type...">
+            <div class="search-results">
+              <div class="search-results__header"></div>
+                <ul class="search-results__items"></ul>
+              </div>
+    </div>
+         
+
+  <div id="wrap">
+    
+      <h1 id="forgeflux">ForgeFlux&nbsp;<a class="anchor" href="#forgeflux">&#xE732;</a></h1>
+<p><a href="https://forgeflux.org/">ForgeFlux</a> aims to implement federation in <a href="https://en.wikipedia.org/wiki/Forge_(software)">software forges</a> , enabling
+a decentralized development environment.</p>
+<h2 id="why-is-this-significant">Why is this significant?&nbsp;<a class="anchor" href="#why-is-this-significant">&#xE732;</a></h2>
+<p>There have been numerous forges that have popped 
+up over the course of time.
+Each of these forges have their own community base,
+and projects that are associated to the forge itself.</p>
+<p>However, issues arise when a user wishes to contribute towards
+a project that exists in another forge.
+This would require them to charter into unknown forge territory,
+to have to relearn the functionality that they're already at home with.</p>
+<p>ForgeFlux, is an idea, that intends to get rid this problem.
+Work on your own forge, but <strong>bridge</strong> the project.</p>
+<p>Bridging a project would allow for a user to contribute towards projects that 
+exist in foreign forges, through the comfort of their own forge.</p>
+<h2 id="has-this-been-done-before">Has this been done before?&nbsp;<a class="anchor" href="#has-this-been-done-before">&#xE732;</a></h2>
+<p>The initial <a href="https://forgefed.peers.community/">forgefed</a> was 
+an attempt to bridge this gap, by introducing the concept 
+of bridging the gap between forges.
+This approach required for the forge developers to actively 
+participate in the development of the software.</p>
+<p>The present ForgeFlux, focuses on the implementation being present 
+in the API space instead.
+This reduces the interference required on the side of the forges themselves,
+and seeks to develop on existing utility and APIs provided.</p>
+<p>ForgeFlux, consists of a terminology for the development and 
+utilization of it's software, which result in terms such as <code>forges</code>,
+and <code>interfaces</code> being tossed around.
+It is recommended for a reader to go through the <a href="https://github.com/forgeflux-org/spec/blob/master/rfc/1-ecosystem-architecture/1-ecosystem-architecture.md">ecosystem-architecture</a>, if there is any confusion regarding the usage of particular words in this documentation.</p>
+
+    
+  </div>
+
+</article>
+</main>
+
+  
+  <script type="text/javascript" src="https://dat-adi.github.io/ff-zola/elasticlunr.min.js" defer></script>
+  <script type="text/javascript" src="https://dat-adi.github.io/ff-zola/search_index.en.js" defer></script>
+  <script type="text/javascript" src="https://dat-adi.github.io/ff-zola/js.js" defer></script>
+  
+
+</body>
+</html>
