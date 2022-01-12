@@ -1,3 +1,4 @@
-# ForgeFed
+# ForgeFlux
 
-This is the docs section of ForgeFed, for more details, please check out [ForgeFed](https://forgefed.io).
+This is the documentation repository for the ForgeFlux Ecosystem. \
+Check us out at [ForgeFlux.org](https://forgeflux.org).
