@@ -19,7 +19,7 @@ jobs:
         run: ./scripts/ci.sh build
 
       - name: Deploy to gh-pages 🚀
-        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages
@@ -27,6 +27,6 @@ jobs:
           folder: ./public
 
       - name: deploy
-        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' && github.repository == 'forgeflux-org/docs' }}
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' && github.repository == 'forgeflux-org/docs' }}
         run: >-
           curl --location --request POST "https://deploy.batsense.net/api/v1/update" --header 'Content-Type: application/json' --data-raw "{ \"secret\": \"${{ secrets.DEPLOY_TOKEN }}\", \"branch\": \"gh-pages\" }"
