@@ -83,6 +83,7 @@ run() {
 }
 
 build() {
+	ls
 	run build
 }
 
