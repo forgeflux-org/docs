@@ -1,4 +1,4 @@
-base_url = "https://dat-adi.github.io/ff-zola/"
+base_url = "https://docs.forgeflux.org"
 title = "Docs"
 compile_sass = true
 build_search_index = true
