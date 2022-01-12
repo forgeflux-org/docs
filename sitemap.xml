@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://dat-adi.github.io/ff-zola/</loc>
+        <loc>https://docs.forgeflux.org/</loc>
     </url>
     <url>
-        <loc>https://dat-adi.github.io/ff-zola/getting-started/</loc>
+        <loc>https://docs.forgeflux.org/getting-started/</loc>
     </url>
     <url>
-        <loc>https://dat-adi.github.io/ff-zola/getting-started/events/</loc>
+        <loc>https://docs.forgeflux.org/getting-started/events/</loc>
     </url>
     <url>
-        <loc>https://dat-adi.github.io/ff-zola/getting-started/intro/</loc>
+        <loc>https://docs.forgeflux.org/getting-started/intro/</loc>
     </url>
     <url>
-        <loc>https://dat-adi.github.io/ff-zola/getting-started/services/</loc>
+        <loc>https://docs.forgeflux.org/getting-started/services/</loc>
     </url>
     <url>
-        <loc>https://dat-adi.github.io/ff-zola/services/</loc>
+        <loc>https://docs.forgeflux.org/services/</loc>
     </url>
     <url>
-        <loc>https://dat-adi.github.io/ff-zola/services/interface/</loc>
+        <loc>https://docs.forgeflux.org/services/interface/</loc>
     </url>
     <url>
-        <loc>https://dat-adi.github.io/ff-zola/services/northstar/</loc>
+        <loc>https://docs.forgeflux.org/services/northstar/</loc>
     </url>
     <url>
-        <loc>https://dat-adi.github.io/ff-zola/updates/</loc>
+        <loc>https://docs.forgeflux.org/updates/</loc>
     </url>
     <url>
-        <loc>https://dat-adi.github.io/ff-zola/updates/november2020/</loc>
+        <loc>https://docs.forgeflux.org/updates/november2020/</loc>
     </url>
     <url>
-        <loc>https://dat-adi.github.io/ff-zola/updates/october2020/</loc>
+        <loc>https://docs.forgeflux.org/updates/october2020/</loc>
     </url>
     <url>
-        <loc>https://dat-adi.github.io/ff-zola/updates/september2020/</loc>
+        <loc>https://docs.forgeflux.org/updates/september2020/</loc>
     </url>
 </urlset>
