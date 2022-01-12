@@ -1,0 +1,222 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+      <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://dat-adi.github.io/ff-zola/main.css">
+      
+        <link rel="icon" href="https://www.getzola.org/favicon.ico">
+      
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+        <title> Docs | November 2020 </title> 
+    </head>
+    <body>
+
+      
+    <script>
+         fetch('https://api.github.com/repos/getzola/zola/releases/latest')
+          .then((response) => {
+            return response.json();
+          })
+          .then((data) => {
+            let release_name = data.name;
+            let html_url = data.html_url;
+            release.innerHTML = `<a href='${html_url}'>${release_name}</a>`;
+          });
+    </script>
+      
+    <main>
+
+      
+
+        <nav>
+          
+            <a href="https:&#x2F;&#x2F;dat-adi.github.io&#x2F;ff-zola&#x2F;">
+            <img src="https://easydocs.codeandmedia.com/logo.svg" alt="" />
+                </a>
+            
+            
+          
+
+          
+            <div id="release"></div>
+          
+  
+  <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+    <div id="trees">
+               
+            
+                 
+            
+ 
+        <input class="tree-toggle" type="checkbox" id="services" 
+         />
+        <label class="tree-toggle-label" for="services">Services</label>
+                        
+        <ul class="subtree">
+                
+                                <li >
+                                    <a href="https://dat-adi.github.io/ff-zola/services/interface/">Interface</a>
+                                </li>
+
+
+
+                   
+    
+    
+                                <li >
+                                    <a href="https://dat-adi.github.io/ff-zola/services/northstar/">Northstar</a>
+                                </li>
+
+
+
+                   
+    
+    
+    </ul>         
+    
+                 
+            
+ 
+        <input class="tree-toggle" type="checkbox" id="getting-started" 
+         />
+        <label class="tree-toggle-label" for="getting-started">Getting Started</label>
+                        
+        <ul class="subtree">
+                
+                                <li >
+                                    <a href="https://dat-adi.github.io/ff-zola/getting-started/services/">Services</a>
+                                </li>
+
+
+
+                   
+    
+    
+                                <li >
+                                    <a href="https://dat-adi.github.io/ff-zola/getting-started/events/">Events</a>
+                                </li>
+
+
+
+                   
+    
+    
+                                <li >
+                                    <a href="https://dat-adi.github.io/ff-zola/getting-started/intro/">How does it work?</a>
+                                </li>
+
+
+
+                   
+    
+    
+    </ul>         
+    
+                 
+            
+ 
+        <input class="tree-toggle" type="checkbox" id="updates" 
+        checked />
+        <label class="tree-toggle-label" for="updates">Updates</label>
+                        
+        <ul class="subtree">
+                
+                                <li class="active">
+                                    <a href="https://dat-adi.github.io/ff-zola/updates/november2020/">November 2020</a>
+                                </li>
+
+
+
+ 
+
+  
+  
+    
+    
+      
+      
+    
+  
+
+  
+
+                       
+    
+    
+                                <li >
+                                    <a href="https://dat-adi.github.io/ff-zola/updates/october2020/">October 2020</a>
+                                </li>
+
+
+
+                   
+    
+    
+                                <li >
+                                    <a href="https://dat-adi.github.io/ff-zola/updates/september2020/">September 2020</a>
+                                </li>
+
+
+
+                   
+    
+    
+    </ul>         
+    
+    </div>    
+  </nav>
+    
+
+<article>
+ 
+  
+  <div id="on_right">
+    <span id="search-ico" class="ms-Icon--Search"></span>
+  </div>
+    <div class="search-container">
+          <input id="search" type="search" placeholder="Search as you type...">
+            <div class="search-results">
+              <div class="search-results__header"></div>
+                <ul class="search-results__items"></ul>
+              </div>
+    </div>
+         
+
+  <div id="wrap">
+    
+        <h1 id="november-2020">November 2020</h1>
+<p>Errors were modularized at the back of <a href="https://github.com/forgeflux-org/northstar/">Northstar</a>.
+A Docker CI was set up for the Northstar builds.</p>
+<p>A <a href="https://github.com/forgeflux-org">GitHub organization</a> was created for ForgeFedv2, and the repositories for the projects were
+transferred over to it.</p>
+<p>A majority of the development on Interface was done during this time.</p>
+<p>A Notification-Event Translation Mechanism was set up.</p>
+<ol>
+<li>Northstar functionality was integrated into Interface, and tests were set up to ensure that it could be contacted through Interface's methods.</li>
+<li>A locking mechanism was set up for concurrent operations on Git utilizing <a href="https://sled.rs/">Sled</a>.</li>
+<li>Implementations of a basic job runner was set up to mimic retrieving requests from Forges, through periodically retrieving notifications.</li>
+<li>The endpoints for notifications was subsequently set up, and responses to these Notifications were termed as <a href="https://dat-adi.github.io/ff-zola/getting-started/events/">events</a>.</li>
+<li>The endpoints for processing these events were then created.</li>
+</ol>
+<p>Shifted over the configuration management to <a href="https://www.dynaconf.com/">Dynaconf</a>.</p>
+<h2 id="references">References</h2>
+<ul>
+<li>Integration with Northstar :: <a href="https://github.com/forgeflux-org/interface/commit/0c9d8bdff05e668d77a85fdfc89b37abe1ac86cb">Info</a></li>
+<li>Locking Mechanism with Sled :: <a href="https://github.com/forgeflux-org/interface/commit/d3e7c81c95d87b612ebb9562cac31d371fe8629e">Info</a></li>
+<li>Defining Events :: <a href="https://github.com/forgeflux-org/interface/commit/30547b783578a7a9548aca55b3b7c932ed8130e6">Info</a></li>
+</ul>
+
+    
+  </div>
+
+</article>
+</main>
+
+  
+  <script type="text/javascript" src="https://dat-adi.github.io/ff-zola/elasticlunr.min.js" defer></script>
+  <script type="text/javascript" src="https://dat-adi.github.io/ff-zola/search_index.en.js" defer></script>
+  <script type="text/javascript" src="https://dat-adi.github.io/ff-zola/js.js" defer></script>
+  
+
+</body>
+</html>

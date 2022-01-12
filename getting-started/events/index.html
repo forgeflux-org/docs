@@ -1,0 +1,216 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+      <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://dat-adi.github.io/ff-zola/main.css">
+      
+        <link rel="icon" href="https://www.getzola.org/favicon.ico">
+      
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+        <title> Docs | Events </title> 
+    </head>
+    <body>
+
+      
+    <script>
+         fetch('https://api.github.com/repos/getzola/zola/releases/latest')
+          .then((response) => {
+            return response.json();
+          })
+          .then((data) => {
+            let release_name = data.name;
+            let html_url = data.html_url;
+            release.innerHTML = `<a href='${html_url}'>${release_name}</a>`;
+          });
+    </script>
+      
+    <main>
+
+      
+
+        <nav>
+          
+            <a href="https:&#x2F;&#x2F;dat-adi.github.io&#x2F;ff-zola&#x2F;">
+            <img src="https://easydocs.codeandmedia.com/logo.svg" alt="" />
+                </a>
+            
+            
+          
+
+          
+            <div id="release"></div>
+          
+  
+  <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+    <div id="trees">
+               
+            
+                 
+            
+ 
+        <input class="tree-toggle" type="checkbox" id="services" 
+         />
+        <label class="tree-toggle-label" for="services">Services</label>
+                        
+        <ul class="subtree">
+                
+                                <li >
+                                    <a href="https://dat-adi.github.io/ff-zola/services/interface/">Interface</a>
+                                </li>
+
+
+
+                   
+    
+    
+                                <li >
+                                    <a href="https://dat-adi.github.io/ff-zola/services/northstar/">Northstar</a>
+                                </li>
+
+
+
+                   
+    
+    
+    </ul>         
+    
+                 
+            
+ 
+        <input class="tree-toggle" type="checkbox" id="getting-started" 
+        checked />
+        <label class="tree-toggle-label" for="getting-started">Getting Started</label>
+                        
+        <ul class="subtree">
+                
+                                <li >
+                                    <a href="https://dat-adi.github.io/ff-zola/getting-started/services/">Services</a>
+                                </li>
+
+
+
+                   
+    
+    
+                                <li class="active">
+                                    <a href="https://dat-adi.github.io/ff-zola/getting-started/events/">Events</a>
+                                </li>
+
+
+
+ 
+
+  
+  
+    
+    
+      
+      
+    
+  
+
+  
+
+                       
+    
+    
+                                <li >
+                                    <a href="https://dat-adi.github.io/ff-zola/getting-started/intro/">How does it work?</a>
+                                </li>
+
+
+
+                   
+    
+    
+    </ul>         
+    
+                 
+            
+ 
+        <input class="tree-toggle" type="checkbox" id="updates" 
+         />
+        <label class="tree-toggle-label" for="updates">Updates</label>
+                        
+        <ul class="subtree">
+                
+                                <li >
+                                    <a href="https://dat-adi.github.io/ff-zola/updates/november2020/">November 2020</a>
+                                </li>
+
+
+
+                   
+    
+    
+                                <li >
+                                    <a href="https://dat-adi.github.io/ff-zola/updates/october2020/">October 2020</a>
+                                </li>
+
+
+
+                   
+    
+    
+                                <li >
+                                    <a href="https://dat-adi.github.io/ff-zola/updates/september2020/">September 2020</a>
+                                </li>
+
+
+
+                   
+    
+    
+    </ul>         
+    
+    </div>    
+  </nav>
+    
+
+<article>
+ 
+  
+  <div id="on_right">
+    <span id="search-ico" class="ms-Icon--Search"></span>
+  </div>
+    <div class="search-container">
+          <input id="search" type="search" placeholder="Search as you type...">
+            <div class="search-results">
+              <div class="search-results__header"></div>
+                <ul class="search-results__items"></ul>
+              </div>
+    </div>
+         
+
+  <div id="wrap">
+    
+        <h1 id="events">Events</h1>
+<p>Events are those operations that are performed on the Forge side,
+such as Pull Requests, and Issues.</p>
+<p>These events are operations of their own, and are handled within Interface
+through Notifications.</p>
+<p>The flow of processing an operation in the forge is done as follows,</p>
+<ol>
+<li>We poll for Notifications through the <a href="https://github.com/forgeflux-org/interface/blob/master/interface/runner/runner.py">Job Runner</a>.</li>
+<li>Proceed to send over this Notification to the Events Endpoint, where the Notification is parsed, and processed.</li>
+<li>After identification, it is converted into a event, PR or Issue.</li>
+</ol>
+<h2 id="references">References</h2>
+<ul>
+<li>Events Endpoint :: <a href="https://github.com/forgeflux-org/interface/blob/master/interface/runner/events.py">Info</a></li>
+</ul>
+
+    
+  </div>
+
+</article>
+</main>
+
+  
+  <script type="text/javascript" src="https://dat-adi.github.io/ff-zola/elasticlunr.min.js" defer></script>
+  <script type="text/javascript" src="https://dat-adi.github.io/ff-zola/search_index.en.js" defer></script>
+  <script type="text/javascript" src="https://dat-adi.github.io/ff-zola/js.js" defer></script>
+  
+
+</body>
+</html>
