@@ -83,7 +83,7 @@ run() {
 }
 
 build() {
-	ls
+	cd docs/zola/
 	run build
 }
 
