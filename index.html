@@ -31,7 +31,7 @@
         <nav>
           
             
-            <img src="https://easydocs.codeandmedia.com/logo.svg" alt="" />
+            <img src="/logo.svg" alt="" />
 
             
             
@@ -55,15 +55,6 @@
         <ul class="subtree">
                 
                                 <li >
-                                    <a href="https://docs.forgeflux.org/services/interface/">Interface</a>
-                                </li>
-
-
-
-                   
-    
-    
-                                <li >
                                     <a href="https://docs.forgeflux.org/services/northstar/">Northstar</a>
                                 </li>
 
@@ -72,37 +63,8 @@
                    
     
     
-    </ul>         
-    
-                 
-            
- 
-        <input class="tree-toggle" type="checkbox" id="getting-started" 
-         />
-        <label class="tree-toggle-label" for="getting-started">Getting Started</label>
-                        
-        <ul class="subtree">
-                
                                 <li >
-                                    <a href="https://docs.forgeflux.org/getting-started/services/">Services</a>
-                                </li>
-
-
-
-                   
-    
-    
-                                <li >
-                                    <a href="https://docs.forgeflux.org/getting-started/events/">Events</a>
-                                </li>
-
-
-
-                   
-    
-    
-                                <li >
-                                    <a href="https://docs.forgeflux.org/getting-started/intro/">How does it work?</a>
+                                    <a href="https://docs.forgeflux.org/services/interface/">Interface</a>
                                 </li>
 
 
@@ -150,6 +112,44 @@
     
     </ul>         
     
+                 
+            
+ 
+        <input class="tree-toggle" type="checkbox" id="getting-started" 
+         />
+        <label class="tree-toggle-label" for="getting-started">Getting Started</label>
+                        
+        <ul class="subtree">
+                
+                                <li >
+                                    <a href="https://docs.forgeflux.org/getting-started/services/">Services</a>
+                                </li>
+
+
+
+                   
+    
+    
+                                <li >
+                                    <a href="https://docs.forgeflux.org/getting-started/events/">Events</a>
+                                </li>
+
+
+
+                   
+    
+    
+                                <li >
+                                    <a href="https://docs.forgeflux.org/getting-started/how/">How does it work?</a>
+                                </li>
+
+
+
+                   
+    
+    
+    </ul>         
+    
     </div>    
   </nav>
     
@@ -171,36 +171,41 @@
 
   <div id="wrap">
     
-      <h1 id="forgeflux">ForgeFlux&nbsp;<a class="anchor" href="#forgeflux">&#xE732;</a></h1>
-<p><a href="https://forgeflux.org/">ForgeFlux</a> aims to implement federation in <a href="https://en.wikipedia.org/wiki/Forge_(software)">software forges</a> , enabling
-a decentralized development environment.</p>
-<h2 id="why-is-this-significant">Why is this significant?&nbsp;<a class="anchor" href="#why-is-this-significant">&#xE732;</a></h2>
-<p>There have been numerous forges that have popped 
-up over the course of time.
-Each of these forges have their own community base,
-and projects that are associated to the forge itself.</p>
-<p>However, issues arise when a user wishes to contribute towards
-a project that exists in another forge.
-This would require them to charter into unknown forge territory,
-to have to relearn the functionality that they're already at home with.</p>
-<p>ForgeFlux, is an idea, that intends to get rid this problem.
-Work on your own forge, but <strong>bridge</strong> the project.</p>
-<p>Bridging a project would allow for a user to contribute towards projects that 
-exist in foreign forges, through the comfort of their own forge.</p>
-<h2 id="has-this-been-done-before">Has this been done before?&nbsp;<a class="anchor" href="#has-this-been-done-before">&#xE732;</a></h2>
-<p>The initial <a href="https://forgefed.peers.community/">forgefed</a> was 
-an attempt to bridge this gap, by introducing the concept 
-of bridging the gap between forges.
-This approach required for the forge developers to actively 
-participate in the development of the software.</p>
-<p>The present ForgeFlux, focuses on the implementation being present 
-in the API space instead.
-This reduces the interference required on the side of the forges themselves,
-and seeks to develop on existing utility and APIs provided.</p>
-<p>ForgeFlux, consists of a terminology for the development and 
-utilization of it's software, which result in terms such as <code>forges</code>,
-and <code>interfaces</code> being tossed around.
-It is recommended for a reader to go through the <a href="https://github.com/forgeflux-org/spec/blob/master/rfc/1-ecosystem-architecture/1-ecosystem-architecture.md">ecosystem-architecture</a>, if there is any confusion regarding the usage of particular words in this documentation.</p>
+      <h2 id="a-day-of-the-past">A day of the past&nbsp;<a class="anchor" href="#a-day-of-the-past">&#xE732;</a></h2>
+<p>It's a Friday evening, and you've sat down to work on some code and halfway through
+testing the code, you realise that there's a problem with a dependency.
+Something's not supposed to work the way it does, and you hop on to the code-hosting
+platform, or forge, that you use on a daily basis to search for the library.
+Realizing that the project is not quite hosted on your forge, you close your eyes,
+before reluctantly heading over to a search engine, to find the project repository
+being hosted on another forge that you haven't worked with.</p>
+<p>At this point, in order to file a bug report, or even send a Pull Request that could
+fix the issue, you would be required to create an account on the forge and clone the
+repository and relearn the workings of the particular forge before finally working
+on the code.
+Manually tracking notifications, setting up new remotes for the upstreams,
+configuring GPG and SSH keys, and having to set up a new development workflow.</p>
+<p>The evening prolongs into the night, and you're finally ready with that PR, which
+you had to learn a new forge for.</p>
+<h2 id="a-day-of-the-future">A day of the future&nbsp;<a class="anchor" href="#a-day-of-the-future">&#xE732;</a></h2>
+<p>Worrying about the forge-specific operations that you'll need to perform are a thing of
+the past now. With the inclusion of a bridging feature in your code-hosting platform,
+you can finally forget about how other forges behave and whether you'll need to work
+towards creating a new account to contribute.
+A contribution, be it a Bug Report, Feature Request, or a Pull Request, now can be
+solved through setting up a bridge to the repository you want to contribute to.</p>
+<p>Days are pleasant and you can continue working on your code after you're done with the
+issue of the library.
+You check out and have more time for things that you wanted to work on for the rest of
+the day.</p>
+<h2 id="enter-forgeflux">Enter ForgeFlux&nbsp;<a class="anchor" href="#enter-forgeflux">&#xE732;</a></h2>
+<p>While the days of the past are what we live in currently, ForgeFlux is the intermediary
+that seeks to get developers to the days of the future!</p>
+<p>Implementing bridging leveraging the API space, <a href="https://docs.forgeflux.org/services/northstar/">Northstar</a>
+points, and the <a href="https://docs.forgeflux.org/services/interface/">Interface</a> sets it all up.
+Know more about how ForgeFlux works <a href="https://docs.forgeflux.org/getting-started/how/">here!</a></p>
+<p>We're currently still in active development, and you can check what we've been
+working on, in the <code>updates/</code> section.</p>
 
     
   </div>

@@ -31,7 +31,7 @@
         <nav>
           
             <a href="https:&#x2F;&#x2F;docs.forgeflux.org">
-            <img src="https://easydocs.codeandmedia.com/logo.svg" alt="" />
+            <img src="/logo.svg" alt="" />
                 </a>
             
             
@@ -55,15 +55,6 @@
         <ul class="subtree">
                 
                                 <li >
-                                    <a href="https://docs.forgeflux.org/services/interface/">Interface</a>
-                                </li>
-
-
-
-                   
-    
-    
-                                <li >
                                     <a href="https://docs.forgeflux.org/services/northstar/">Northstar</a>
                                 </li>
 
@@ -72,52 +63,13 @@
                    
     
     
-    </ul>         
-    
-                 
-            
- 
-        <input class="tree-toggle" type="checkbox" id="getting-started" 
-        checked />
-        <label class="tree-toggle-label" for="getting-started">Getting Started</label>
-                        
-        <ul class="subtree">
-                
                                 <li >
-                                    <a href="https://docs.forgeflux.org/getting-started/services/">Services</a>
+                                    <a href="https://docs.forgeflux.org/services/interface/">Interface</a>
                                 </li>
 
 
 
                    
-    
-    
-                                <li >
-                                    <a href="https://docs.forgeflux.org/getting-started/events/">Events</a>
-                                </li>
-
-
-
-                   
-    
-    
-                                <li class="active">
-                                    <a href="https://docs.forgeflux.org/getting-started/intro/">How does it work?</a>
-                                </li>
-
-
-
- 
-
-  
-  
-    
-    
-  
-
-  
-
-                       
     
     
     </ul>         
@@ -160,6 +112,63 @@
     
     </ul>         
     
+                 
+            
+ 
+        <input class="tree-toggle" type="checkbox" id="getting-started" 
+        checked />
+        <label class="tree-toggle-label" for="getting-started">Getting Started</label>
+                        
+        <ul class="subtree">
+                
+                                <li >
+                                    <a href="https://docs.forgeflux.org/getting-started/services/">Services</a>
+                                </li>
+
+
+
+                   
+    
+    
+                                <li >
+                                    <a href="https://docs.forgeflux.org/getting-started/events/">Events</a>
+                                </li>
+
+
+
+                   
+    
+    
+                                <li class="active">
+                                    <a href="https://docs.forgeflux.org/getting-started/how/">How does it work?</a>
+                                </li>
+
+
+
+ 
+
+  
+  
+    
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+  
+
+  
+
+                       
+    
+    
+    </ul>         
+    
     </div>    
   </nav>
     
@@ -182,19 +191,35 @@
   <div id="wrap">
     
         <h1 id="how-does-it-work">How does it work?</h1>
-<p>Interfaces are services that are run on the side of any user, and are used as connecting points of the bridge.
-These interfaces are responsible for communicating with each other, and interact in the form of messages for a server-server model, and a REST API model for the server-user model.</p>
-<p>Interfaces are geared towards performing various operations for the repository, which include but are not limited to,</p>
+<p>Bridges connect people, and so does ForgeFlux!</p>
+<h2 id="interface">Interface</h2>
+<p>The bridging component in ForgeFlux is called Interface.</p>
+<p><a href="https://docs.forgeflux.org/services/interface/">Interfaces</a> are programs that run on either
+side of the bridge, i.e, a bridge requires the participation of two
+interfaces. Currently, Interfaces bridge the following operations:</p>
 <ul>
 <li>Pull Requests</li>
 <li>Issues</li>
 <li>Comments</li>
-<li>Notifications</li>
-<li>Forking</li>
 </ul>
-<p>However, as the count for interfaces go up in magnitudes, it becomes increasingly hard to keep track of them.
-This is where Northstar comes to play, by implementing a lookup server that seeks to provide an indexed list of available forge interfaces.</p>
-<p>ForgeFlux is currently in the Active Development phase, and is being worked on towards the alpha-testing stage.</p>
+<p>An Interface implementation for a software forge is able to
+talk to the forge's API and speak <a href="https://activitypub.rocks/">ActivityPub
+protocol</a> for server-to-server
+communications. This architecture makes it possible to implement an
+Interface for any forge setup.</p>
+<h2 id="northstar">Northstar</h2>
+<p>Since Interfaces run external to the forges, a method to find Interfaces
+that service forges was required.</p>
+<p><a href="https://docs.forgeflux.org/services/northstar/">Northstar</a> is a discovery service that maps an
+Interface and the forge that it services. It acts very similar to DNS,
+except instead of querying host names with intent to find corresponding
+IP address, Northstar is queried with the forge's host name to discover
+the Interfaces that service it.</p>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://github.com/forgeflux-org/spec/blob/master/rfc/1-ecosystem-architecture/1-ecosystem-architecture.md">ecosystem-architecture</a>:
+describes basic architecture and terminology used in ForgeFlux</li>
+</ul>
 
     
   </div>
