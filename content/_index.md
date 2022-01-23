@@ -3,43 +3,48 @@ title = "Magic Bridges"
 insert_anchor_links = "right"
 +++
 
-# ForgeFlux
+## A day of the past
 
-[ForgeFlux](https://forgeflux.org/) aims to implement federation in [software forges](https://en.wikipedia.org/wiki/Forge_(software)) , enabling
-a decentralized development environment.
+It's a Friday evening, and you've sat down to work on some code and halfway through
+testing the code, you realise that there's a problem with a dependency.
+Something's not supposed to work the way it does, and you hop on to the code-hosting
+platform, or forge, that you use on a daily basis to search for the library.
+Realizing that the project is not quite hosted on your forge, you close your eyes,
+before reluctantly heading over to a search engine, to find the project repository
+being hosted on another forge that you haven't worked with.
 
-## Why is this significant?
-There have been numerous forges that have popped 
-up over the course of time.
-Each of these forges have their own community base,
-and projects that are associated to the forge itself.
+At this point, in order to file a bug report, or even send a Pull Request that could
+fix the issue, you would be required to create an account on the forge and clone the
+repository and relearn the workings of the particular forge before finally working
+on the code.
+Manually tracking notifications, setting up new remotes for the upstreams,
+configuring GPG and SSH keys, and having to set up a new development workflow.
 
-However, issues arise when a user wishes to contribute towards
-a project that exists in another forge.
-This would require them to charter into unknown forge territory,
-to have to relearn the functionality that they're already at home with.
+The evening prolongs into the night, and you're finally ready with that PR, which
+you had to learn a new forge for.
 
-ForgeFlux, is an idea, that intends to get rid this problem.
-Work on your own forge, but **bridge** the project.
+## A day of the future
 
-Bridging a project would allow for a user to contribute towards projects that 
-exist in foreign forges, through the comfort of their own forge.
+Worrying about the forge-specific operations that you'll need to perform are a thing of
+the past now. With the inclusion of a bridging feature in your code-hosting platform,
+you can finally forget about how other forges behave and whether you'll need to work
+towards creating a new account to contribute.
+A contribution, be it a Bug Report, Feature Request, or a Pull Request, now can be
+solved through setting up a bridge to the repository you want to contribute to.
 
-## Has this been done before?
+Days are pleasant and you can continue working on your code after you're done with the
+issue of the library.
+You check out and have more time for things that you wanted to work on for the rest of
+the day.
 
-The initial [forgefed](https://forgefed.peers.community/) was 
-an attempt to bridge this gap, by introducing the concept 
-of bridging the gap between forges.
-This approach required for the forge developers to actively 
-participate in the development of the software.
+## Enter ForgeFlux
 
-The present ForgeFlux, focuses on the implementation being present 
-in the API space instead.
-This reduces the interference required on the side of the forges themselves,
-and seeks to develop on existing utility and APIs provided.
+While the days of the past are what we live in currently, ForgeFlux is the intermediary
+that seeks to get developers to the days of the future!
 
-ForgeFlux, consists of a terminology for the development and 
-utilization of it's software, which result in terms such as `forges`,
-and `interfaces` being tossed around.
-It is recommended for a reader to go through the [ecosystem-architecture](https://github.com/forgeflux-org/spec/blob/master/rfc/1-ecosystem-architecture/1-ecosystem-architecture.md), if there is any confusion regarding the usage of particular words in this documentation.
+Implementing bridging leveraging the API space, [Northstar](@/services/northstar.md)
+points, and the [Interface](@/services/interface.md) sets it all up.
+Know more about how ForgeFlux works [here!](@/getting-started/how.md)
 
+We're currently still in active development, and you can check what we've been
+working on, in the `updates/` section.
