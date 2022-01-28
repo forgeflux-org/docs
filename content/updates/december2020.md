@@ -10,22 +10,20 @@ As the development on [Northstar](@/services/northstar.md) nears the completion 
 updates on it have slowed down, and the only updates that were made during this
 stage mostly comprises of configuration updates.
 These updates were mostly related to bootstrapping [DynaConf](https://www.dynaconf.com/), 
-and fixing issues with the rendering of the `docs` or the main website itself.
+as we embraced 12-factor app configuration recommendations, allowing for better 
+configuration management.
 
 ## Interface
 
-A test suite was developed for the Gitea ecosystem, and a refactor was performed on the
-various structures to leverage the functionality provided by [dataclasses](https://docs.python.org/3/library/dataclasses.html).
-
-Error handling mechanisms were set up for the client side, and an implementation of a 
-forking mechanism was developed, followed by the forking mechanism for the Gitea forge.
 Realising the need for validation of a request to an actor, an authentication 
 mechanism was developed to implement Matrix's [signed JSON](https://github.com/matrix-org/python-signedjson)
 feature, but, was later replaced in favor of [HTTP Signatures](https://tools.ietf.org/html/draft-cavage-http-signatures).
 
-The database and endpoints were refactored to accommodate features implemented
-by the previous updates to the codebase. Subsequently, this was followed up with an 
-id implementation to support the lazy loading of data.
+Interface underwent major refactoring to improve test-ability and reliability in addition 
+to implementing authentication by a [signed JSON](https://github.com/matrix-org/python-signedjson)
+mechanism implemented by the Matrix project. Taking note of rate-limits imposed by some forges, 
+we figured we'd have to cache responses and so data persistence was implemented by way of 
+storing in a database.
 
 ## References
 These are a list of the Pull Requests where the following updates took place for the
