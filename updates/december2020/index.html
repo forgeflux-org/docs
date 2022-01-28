@@ -7,7 +7,7 @@
         <link rel="icon" href="https://www.getzola.org/favicon.ico">
       
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-        <title> Docs | September 2020 </title> 
+        <title> Docs | December 2020 </title> 
     </head>
     <body>
 
@@ -83,13 +83,32 @@
                         
         <ul class="subtree">
                 
-                                <li >
+                                <li class="active">
                                     <a href="https://docs.forgeflux.org/updates/december2020/">December 2020</a>
                                 </li>
 
 
 
-                   
+ 
+
+  
+  
+    
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+  
+
+  
+
+                       
     
     
                                 <li >
@@ -110,23 +129,13 @@
                    
     
     
-                                <li class="active">
+                                <li >
                                     <a href="https://docs.forgeflux.org/updates/september2020/">September 2020</a>
                                 </li>
 
 
 
- 
-
-  
-  
-    
-    
-  
-
-  
-
-                       
+                   
     
     
     </ul>         
@@ -190,14 +199,31 @@
 
   <div id="wrap">
     
-        <h1 id="september-2020">September 2020</h1>
-<p>In the month of September, project &quot;ForgeFedv2&quot; started off by
-initializing the lookup service, <a href="https://github.com/forgeflux-org/northstar/">Northstar</a>.</p>
-<p>The initialization mostly comprised of setting up the CI environment,
-and focused more on defining the structure of the project, and how
-we were to be going about it.</p>
-<p>A discussion on the terminology and the primitive method of the
-project's functionality were discussed.</p>
+        <h1 id="december-2020">December 2020</h1>
+<h2 id="northstar">Northstar</h2>
+<p>As the development on <a href="https://docs.forgeflux.org/services/northstar/">Northstar</a> nears the completion phase,
+updates on it have slowed down, and the only updates that were made during this
+stage mostly comprises of configuration updates.
+These updates were mostly related to bootstrapping <a href="https://www.dynaconf.com/">DynaConf</a>, 
+as we embraced 12-factor app configuration recommendations, allowing for better 
+configuration management.</p>
+<h2 id="interface">Interface</h2>
+<p>Realising the need for validation of a request to an actor, an authentication 
+mechanism was developed to implement Matrix's <a href="https://github.com/matrix-org/python-signedjson">signed JSON</a>
+feature, but, was later replaced in favor of <a href="https://tools.ietf.org/html/draft-cavage-http-signatures">HTTP Signatures</a>.</p>
+<p>Interface underwent major refactoring to improve test-ability and reliability in addition 
+to implementing authentication by a <a href="https://github.com/matrix-org/python-signedjson">signed JSON</a>
+mechanism implemented by the Matrix project. Taking note of rate-limits imposed by some forges, 
+we figured we'd have to cache responses and so data persistence was implemented by way of 
+storing in a database.</p>
+<h2 id="references">References</h2>
+<p>These are a list of the Pull Requests where the following updates took place for the
+organization.</p>
+<ul>
+<li>Forking Implementation :: <a href="https://github.com/forgeflux-org/interface/commit/5c9f61d60ce069963da7abc761b9ba3d81c8883a">#34</a></li>
+<li>Authentication :: <a href="https://github.com/forgeflux-org/interface/commit/5cc206cbe5be83cedac14949a537baad4c6351e3">#36</a></li>
+<li>DB Refactor :: <a href="https://github.com/forgeflux-org/interface/commit/57c9a085b38f8c3bab7975e18d21e4455ad3cac9">#39</a>, <a href="https://github.com/forgeflux-org/interface/commit/d9d785ca116e9a2bb9a40cf3eaa16a8b275d1593">#40</a></li>
+</ul>
 
     
   </div>
