@@ -35,7 +35,11 @@ url = "http://computer.domain.com:port"
 ```
 
 Note that the port assigned to the interface and northstar must not already be in
-use by another application/service.
+use by another application/service, and that you can find out the hostname for 
+your system through the following command,
+```sh
+hostname --fqdn
+```
 
 There are a few more settings to add in, as a means to validate the user who hosts
 the interface, this also depends on the forge of your choosing. As of right now,
