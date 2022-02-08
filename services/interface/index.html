@@ -75,6 +75,14 @@
   
     
     
+      
+      
+    
+      
+      
+        
+      
+    
   
 
   
@@ -203,6 +211,43 @@ one forge to another forge.</p>
 <li>Every notification received by the interface from the forges, is then identified and translated into it's respective <code>Event</code> model, be it an Issue or PR.</li>
 <li>Upon conversion into the respective model, Interface processes these <code>Events</code>, and converts them into the model required for the destination forge.</li>
 </ol>
+<h2 id="setting-up-the-development-environment">Setting up the Development Environment&nbsp;<a class="anchor" href="#setting-up-the-development-environment">&#xE732;</a></h2>
+<p>In order to test out and utilise the Northstar lookup service, we will need to set
+up an interface to be run on the local machine. There are a few configuration 
+changes that must be made for the interface to be recognized by the lookup service.</p>
+<p>Changes to the <code>config/settings.toml</code>,</p>
+<pre data-lang="toml" style="background-color:#eff1f5;color:#4f5b66;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[default.system]
+</span><span style="color:#bf616a;">northstar </span><span>= &quot;</span><span style="color:#a3be8c;">http://computer.domain.com:port</span><span>&quot;
+</span><span>
+</span><span>[default.server]
+</span><span style="color:#bf616a;">url </span><span>= &quot;</span><span style="color:#a3be8c;">http://computer.domain.com:port</span><span>&quot;
+</span></code></pre>
+<p>Note that the port assigned to the interface and northstar must not already be in
+use by another application/service, and that you can find out the hostname for 
+your system through the following command,</p>
+<pre data-lang="sh" style="background-color:#eff1f5;color:#4f5b66;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">hostname --fqdn
+</span></code></pre>
+<p>There are a few more settings to add in, as a means to validate the user who hosts
+the interface, this also depends on the forge of your choosing. As of right now,
+<code>interface</code> supports only gitea, and we can fill up the <code>config/settings.toml</code>,
+with the same.</p>
+<pre data-lang="toml" style="background-color:#eff1f5;color:#4f5b66;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[default]
+</span><span style="color:#bf616a;">forge </span><span>= &quot;</span><span style="color:#a3be8c;">gitea</span><span>&quot;
+</span><span>
+</span><span>[default.gitea]
+</span><span style="color:#bf616a;">host </span><span>= &quot;</span><span style="color:#a3be8c;">https://gitea.com</span><span>&quot;
+</span><span style="color:#bf616a;">api_key </span><span>= &quot;</span><span style="color:#a3be8c;">generate-the-api-key-from-gitea-and-paste-here</span><span>&quot;
+</span><span style="color:#bf616a;">username </span><span>= &quot;</span><span style="color:#a3be8c;">fluxer101</span><span>&quot;
+</span><span style="color:#bf616a;">password </span><span>= &quot;</span><span style="color:#a3be8c;">flux101</span><span>&quot;
+</span></code></pre>
+<p>Note that the API key in Gitea is known as an access token, one which can be 
+generated <a href="https://gitea.com/user/settings/applications">here</a>.</p>
+<h2 id="faq">FAQ&nbsp;<a class="anchor" href="#faq">&#xE732;</a></h2>
+<h3 id="why-does-an-integrity-error-show-up">Why does an integrity error show up?&nbsp;<a class="anchor" href="#why-does-an-integrity-error-show-up">&#xE732;</a></h3>
+<p>As ForgeFlux's Interface is an actively developing project, there are a few 
+errors that are caused by an upgrade to the database, in which case integrity errors
+are bound to pop up. In this case, remove the <code>instance/</code> directory where the database
+for the service would be stored, to rebuild it the next time the application is run.</p>
 
     
   </div>
