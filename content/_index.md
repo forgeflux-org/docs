@@ -1,50 +1,92 @@
 +++
-title = "Magic Bridges"
+title = "Welcome to ForgeFlux Documentation"
 insert_anchor_links = "right"
 +++
 
-## A day of the past
+## Status
 
-It's a Friday evening, and you've sat down to work on some code and halfway through
-testing the code, you realise that there's a problem with a dependency.
-Something's not supposed to work the way it does, and you hop on to the code-hosting
-platform, or forge, that you use on a daily basis to search for the library.
-Realizing that the project is not quite hosted on your forge, you close your eyes,
-before reluctantly heading over to a search engine, to find the project repository
-being hosted on another forge that you haven't worked with.
+This site is Work-in-Progress, and as such, everything is in an
+incomplete-state.
 
-At this point, in order to file a bug report, or even send a Pull Request that could
-fix the issue, you would be required to create an account on the forge and clone the
-repository and relearn the workings of the particular forge before finally working
-on the code.
-Manually tracking notifications, setting up new remotes for the upstreams,
-configuring GPG and SSH keys, and having to set up a new development workflow.
+## Source code
 
-The evening prolongs into the night, and you're finally ready with that PR, which
-you had to learn a new forge for.
+Split between two forges, slowly migrating to self-hosted
+[Forgejo](https://forgejo.org) instance at
+[git.batsense.net](https://git.batsense.net)
 
-## A day of the future
+1. [git.batsense.net](https://git.batsense.net/ForgeFlux)
+1. [GitHub](https://github.com/forgeflux-org)
 
-Worrying about the forge-specific operations that you'll need to perform are a thing of
-the past now. With the inclusion of a bridging feature in your code-hosting platform,
-you can finally forget about how other forges behave and whether you'll need to work
-towards creating a new account to contribute.
-A contribution, be it a Bug Report, Feature Request, or a Pull Request, now can be
-solved through setting up a bridge to the repository you want to contribute to.
+## Projects Overview
 
-Days are pleasant and you can continue working on your code after you're done with the
-issue of the library.
-You check out and have more time for things that you wanted to work on for the rest of
-the day.
+### Project Status: what does it mean?
 
-## Enter ForgeFlux
+1. WIP: Code isn't usable.
+2. Usable: Code works, but user experience isn't polished. Can be used
+   with a bit of patience ;)
+3. Production: Ready for use
 
-While the days of the past are what we live in currently, ForgeFlux is the intermediary
-that seeks to get developers to the days of the future!
+### 1. Interface
 
-Implementing bridging leveraging the API space, [Northstar](@/services/northstar.md)
-points, and the [Interface](@/services/interface.md) sets it all up.
-Know more about how ForgeFlux works [here!](@/getting-started/how.md)
+-   [Source code](https://github.com/forgeflux-org/interface)
+-   Status: WIP
+-   Description: API-space software forge federation implementation.
 
-We're currently still in active development, and you can check what we've been
-working on, in the `updates/` section.
+Federation will take time to implement in most, popular software forge
+implementations. Interface aims to use the forge's REST API or similar
+and create a federation layer on top of it.
+
+Currently, implementation has minimal support for Forgejo and Gitea. A
+Forgejo user can be exposed to Fediverse through WebFinger using
+Interface.
+
+### 2. Northstar
+
+-   [Source code](https://github.com/forgeflux-org/northstar)
+-   Status: Production
+-   Description: A lookup service for federating software forges
+-   Flagship instance: [northstar.forgeflux.org](https://northstar.forgeflux.org)
+
+Interface's API-based, external, third-party approach introduces a
+unique problem: how to locate the internet address (hostname) of the
+Interface that services a forgege? Enter Northstar. It is a simple
+Key-Value search server that maps forges and internfaces
+
+### 3. Starchart
+
+-   [Source code](https://github.com/forgeflux-org/starchart)
+-   Status: Usable
+-   Description: Spider and search engine for federating forges
+-   Flagship instance:
+    [starchart.forgeflux.org](https://starchart.forgeflux.org)
+
+Projects on centralized forges like GitHub and GitLab enjoy good
+visibility through network effect, good search engine indexing and
+through third-party tools like
+[awesomeopensource.com/](https://awesomeopensource.com/).
+
+Starchart aims to provide high-visibility for projects on independently
+hosted forges by indexing them and exposing the index with a searchable
+index. The index is designed to be replicated, so that new Starchart
+instances can be bootstrapped from an existing Starchart instance's
+data.
+
+### 4. f3-rs
+
+-   [Source code](https://git.batsense.net/ForgeFlux/f3-rs)
+-   Status: WIP
+-   Description: Rust port of the [Friendly Forge Format](https://f3.forgefriends.org/) library
+-   Documentation link: [f3.forgeflux.org](https://forgeflux.org)
+
+### 4. ftest
+
+-   [Source code](https://git.batsense.net/ForgeFlux/ftest)
+-   Status: Usable
+-   Description: Compliance checker/test runner for [ActivityPub](https://activitypub.rocks) and by
+    extension, [ForgeFed](https://forgefed.org)
+
+The idea is to create something similar to
+[matrix-org/sytest](https://github.com/matrix-org/sytest), but for
+ActivityPub and ForgeFed. This way, we'll be able to measure how
+compliant an implementation is to the specifications, which we hope will
+improve interoperability between instances.
